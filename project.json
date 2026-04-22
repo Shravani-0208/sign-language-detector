@@ -1,0 +1,25 @@
+{
+  "overview": "A full-stack sign language detector that uses your webcam and browser-based machine learning to recognize hand gestures in real time. Includes a structured learning library for alphabets, numbers, and common phrases, plus an interactive practice mode that validates your gestures and tracks your progress.",
+  "features": [
+    "Real-time hand gesture recognition using MediaPipe Hands in the browser",
+    "Live webcam feed with detected gesture displayed as large, highlighted text",
+    "Learning library with alphabets A-Z, numbers 0-9, and common gestures (Hello, Thank You, etc.)",
+    "Practice mode with live feedback — shows 'Match!' or 'Try Again' and marks gestures as learned",
+    "User authentication with progress tracking across sessions",
+    "Dashboard showing total learned gestures and next recommendations",
+    "Dark mode toggle with persistent preference",
+    "Fully responsive design for mobile and desktop"
+  ],
+  "category": "productivity",
+  "tags": [
+    "sign-language",
+    "gesture-recognition",
+    "machine-learning",
+    "mediapipe",
+    "accessibility",
+    "learning",
+    "webcam",
+    "real-time"
+  ],
+  "last_updated": "2026-04-22T17:20:37.005Z"
+}

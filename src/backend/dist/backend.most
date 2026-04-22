@@ -1,0 +1,36 @@
+// Version: 1.0.0
+type Data__791452850<K, V> =
+  {var count : Nat__490723111; kvs : [var ?(K, V)]};
+type Int__270357528 = Int__616954475;
+type Int__616954475 = Int;
+type Internal__8484328<K, V> =
+  {children : [var ?Node__46230540<K, V>]; data : Data__791452850<K, V>};
+type Leaf__809889148<K, V> = {data : Data__791452850<K, V>};
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+type Node__46230540<K, V> =
+  {#internal : Internal__8484328<K, V>; #leaf : Leaf__809889148<K, V>};
+type Time__796480547 = Int__270357528;
+type Time__900049286 = Time__796480547;
+type Timestamp__301639476 = Time__900049286;
+type Timestamp__7138886 = Timestamp__301639476;
+type UserId__1023114477 = UserId__158757552;
+type UserId__158757552 = Principal;
+type UserProfileInternal__348655225 =
+  {
+    createdAt : Timestamp__7138886;
+    var displayName : Text;
+    id : UserId__1023114477;
+    var lastActiveAt : Timestamp__7138886;
+    var learnedAlphabets : [Text];
+    var learnedCommonGestures : [Text];
+    var learnedNumbers : [Text];
+    var totalGesturesLearned : Nat
+  };
+actor {
+  stable profiles :
+    {
+      var root : Node__46230540<Principal, UserProfileInternal__348655225>;
+      var size : Nat__490723111
+    }
+};

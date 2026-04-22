@@ -1,0 +1,30 @@
+type UserProfile = 
+ record {
+   createdAt: Timestamp;
+   displayName: text;
+   id: UserId;
+   lastActiveAt: Timestamp;
+   learnedAlphabets: vec text;
+   learnedCommonGestures: vec text;
+   learnedNumbers: vec text;
+   totalGesturesLearned: nat;
+ };
+type UserId = principal;
+type Timestamp = int;
+type MarkResult = 
+ variant {
+   err: text;
+   ok: UserProfile;
+ };
+type LeaderboardEntry = 
+ record {
+   displayName: text;
+   totalGesturesLearned: nat;
+   userId: UserId;
+ };
+service : {
+  getLeaderboardStats: (limit: nat) -> (vec LeaderboardEntry) query;
+  getOrCreateProfile: () -> (UserProfile);
+  getProgress: () -> (opt UserProfile) query;
+  markGestureLearned: (category: text, gesture: text) -> (MarkResult);
+}
